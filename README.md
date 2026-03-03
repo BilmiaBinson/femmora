@@ -37,7 +37,7 @@ Before you begin, ensure you have the following:
 1.  **A Modern Web Browser**: Chrome, Firefox, Edge, or Safari.
 2.  **A Google Gemini API Key**:
     - You must have a valid API key from [Google AI Studio](https://aistudio.google.com/).
-    - The application is configured to access this key via an environment variable `process.env.API_KEY`. **Your local development environment must be set up to provide this variable for the AI features to work.** The hosting environment where this app is deployed will handle this securely.
+    - Copy `.env.example` to `.env` and add your key to `VITE_GEMINI_API_KEY=`. The project uses `VITE_`-prefixed env vars for Vite; the value is injected at build time. Important: do NOT commit your `.env` file.
 3.  **A Simple Local Web Server**: Since the app uses ES modules, you cannot open `index.html` directly from the file system (`file://...`). You need to serve it over HTTP.
     - **Recommended**: The **[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)** extension for Visual Studio Code.
     - **Alternative**: If you have Python installed, you can use its built-in server.
